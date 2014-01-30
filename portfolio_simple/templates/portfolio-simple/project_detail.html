@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}<title>{{ project.name }}</title>{% endblock %}
+
+{% block "content" %}
+            <p>
+                <strong>{{ project.name }}</strong>
+            </p>
+            <p>
+                {{ project.description }}
+            </p>
+            <p>
+                <a href="{% url 'portfolio-projects-list'  %}">To list of projects</a>
+            </p>
+{% endblock %}

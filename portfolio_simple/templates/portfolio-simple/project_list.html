@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Portfolio list</title>{% endblock %}
+
+{% block "content" %}
+
+        {% for project in project_list %}
+            <p>
+                <strong>{{ project.name }}</strong>
+            </p>
+            <p>
+                {{ project.description }}
+            </p>
+            <p>
+                <a href="{% url 'portfolio-project-detail' slug=project.slug %}">{{ project.name }}</a>
+            </p>
+        {% endfor %}
+{% endblock %}
